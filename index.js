@@ -2,30 +2,32 @@
 //import './style.css';
 
 
-function even() 
+let odd = () =>
 {
-   var no1=document.getElementById('no').value;
+  let no1=0;
+  
+    no1=document.getElementById('no').value;
 
-  let evodd=evenodd(no1);
+     let evodd=evenodd(no1);
 
-   console.log(evodd);
+       console.log(evodd);
 
-    if(evodd!=0)
-     {
-       document.getElementById('result').innerHTML=`The number ${no1} is even.`;
-     }
-   else
-    {
-      document.getElementById('result').innerHTML=`The number ${no1} is odd.`;
-    }
+    document.getElementById('result').innerHTML=`The number ${no1} is ${evodd}.`;
+
 }
-
 function evenodd(no1)
 {
-     return no1%2==0;   
+     if( no1%2==0)
+     {
+       return "even";
+     }
+     else
+     {
+       return "odd";
+     }   
 }
 
 const butts=document.querySelector('#button');
 
- butts.addEventListener('click',even);
+ butts.addEventListener('click',odd);
 
