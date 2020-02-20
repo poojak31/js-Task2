@@ -1,24 +1,6 @@
 // Import stylesheets
 //import './style.css';
 
-// function EvenOdd()
-// {
- 
-//        var no1=document.getElementById('no').value;
-
-//        if(no1%2==0)
-//        {
-//           document.getElementById('result').innerHTML=`The number ${no1} is even.`;
-//        }
-//        else
-//        {
-//           document.getElementById('result').innerHTML=`The number ${no1} is odd.`
-//        }
-// }
-
-// const butts=document.querySelector('#button');
-
-// butts.addEventListener('click',EvenOdd);
 
 function even() 
 {
@@ -27,23 +9,23 @@ function even()
   let odd=evenodd(no1);
 
    console.log(odd);
-  
+
+    if(odd!=0)
+     {
+       document.getElementById('result').innerHTML=`The number ${no1} is even.`;
+     }
+   else
+    {
+      document.getElementById('result').innerHTML=`The number ${no1} is odd.`;
+    }
 }
 
 function evenodd(no1)
 {
-     if(no1%2==0)
-       {
-        return  document.getElementById('result').innerHTML=`The number ${no1} is even.`;
-       }
-       else
-       {
-         return document.getElementById('result').innerHTML=`The number ${no1} is odd.`;
-       }
+     return no1%2==0;   
 }
 
 const butts=document.querySelector('#button');
 
  butts.addEventListener('click',even);
-
 
