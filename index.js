@@ -6,11 +6,11 @@ function even()
 {
    var no1=document.getElementById('no').value;
 
-  let odd=evenodd(no1);
+  let evodd=evenodd(no1);
 
-   console.log(odd);
+   console.log(evodd);
 
-    if(odd!=0)
+    if(evodd!=0)
      {
        document.getElementById('result').innerHTML=`The number ${no1} is even.`;
      }
